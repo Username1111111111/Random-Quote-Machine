@@ -29,7 +29,7 @@ function getRandomQuoteNumber(numberOfQuotesInJSON) {
 }
 
 function getQuotes() {
-  fetch("https://raw.githubusercontent.com/Username1111111111/random-quote-generator/master/quotes.txt")
+  fetch("https://raw.githubusercontent.com/Username1111111111/Random-Quote-Machine/master/quotes.txt")
   .then( function(response) {
     return response.json()
   })
