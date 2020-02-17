@@ -6,12 +6,13 @@ window.onload = function() {
   var myQuotesJSON;
   var numberOfQuotesInJSON;
   getQuotes();
+  // tweetQuote();
   canvasGen();
   newBackground();
 }
 
 document.getElementById("new-quote").onclick = () => { newQuote(); canvasGen(); newBackground(); };
-document.getElementById("tweet-quote").onclick = () => { tweetQuote() };
+document.getElementById("tweet-quote").onclick = () => { tweetQuote(); };
 
 window.addEventListener('resize', canvasGen, false);
 
@@ -60,14 +61,14 @@ function newQuote() {
   // setTimeout( () => { 
   //   text.classList.remove("pulse");
   // }, 1100);
-  
+
   if (newAuthor == null) {
     document.getElementById("author").innerHTML = "Someome";
   }
   else {
     document.getElementById("author").innerHTML = newAuthor;
   }
-
+  // tweetQuote();
 }
 
 function tweetQuote() {
@@ -76,6 +77,7 @@ function tweetQuote() {
   let author = document.getElementById("author").innerHTML;
   let tweetUrlPart2 = encodeURIComponent('"' + text + '" (c) ' + author);
   let tweetUrl = tweetUrlPart1 +  tweetUrlPart2;
+  // document.getElementById("tweet-quote").href = tweetUrl;
   window.open(tweetUrl, "theFrame");
   // .then(document.body.querySelector('input.button.selected.submit').click());
 }
@@ -258,15 +260,14 @@ function splitScreen(widthPx, heightPx) {
 
 
 function animateCSS(element, animationName, callback) {
-    const node = document.querySelector(element)
-    node.classList.add('animated', animationName)
+  const node = document.querySelector(element)
+  node.classList.add('animated', animationName)
+  
+  function handleAnimationEnd() {
+    node.classList.remove('animated', animationName)
+    node.removeEventListener('animationend', handleAnimationEnd)
+    if (typeof callback === 'function') callback()
+  }
 
-    function handleAnimationEnd() {
-        node.classList.remove('animated', animationName)
-        node.removeEventListener('animationend', handleAnimationEnd)
-
-        if (typeof callback === 'function') callback()
-    }
-
-    node.addEventListener('animationend', handleAnimationEnd)
+node.addEventListener('animationend', handleAnimationEnd)
 }
