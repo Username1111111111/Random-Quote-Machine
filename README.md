@@ -1,9 +1,9 @@
 # Random quote machine ![](https://img.shields.io/badge/Status-Complete-green)
 > App that randomly generates canvas background and quotes.
-> [Live demo here](https://username1111111111.github.io/Random-Quote-Machine/)
-> Or 👇:
+> <p><a href="https://username1111111111.github.io/Random-Quote-Machine/">Live demo here</a></p>
+> <p>Or 👇:</p>
 <a href="https://username1111111111.github.io/Random-Quote-Machine/">
-  <img src="./_resourses/random-quote-machine.png">
+ <img src="./_resourses/random-quote-machine.png">
 </a>
 
 
