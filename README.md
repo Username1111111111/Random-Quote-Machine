@@ -2,7 +2,8 @@
 > App that randomly generates canvas background and quotes.
 > [Live demo here](https://username1111111111.github.io/Random-Quote-Machine/)
 > Or 👇:
-> <a href="https://username1111111111.github.io/Random-Quote-Machine/">![QR](./_resourses/random-quote-machine.png)
+<a href="https://username1111111111.github.io/Random-Quote-Machine/">
+  <img src="./_resourses/random-quote-machine.png">
 </a>
 
 
@@ -44,6 +45,5 @@ Just clone the repo and open **index.html** in a browser 👍
 ## Contact
 <p style="font-size: 16px;"><a style="text-decoration: none;"href="https://github.com/Username1111111111/Username1111111111">@Username1111111111</a><details> 
   <summary>The Frontend developer </summary>
-   <img style="height: 28px; vertical-align: middle;" src=":/bc074b4554b74181b43e31e040b93ce4"> 💪
+  💪
 </details></p>
->>>>>>> New README
